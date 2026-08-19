@@ -11,7 +11,7 @@ Official landing page for **Heading Jump Fix** (Obsidian Community plugin **v0.1
 
 | Service | URL |
 |---------|-----|
-| **GitHub** | https://github.com/crossbeat461-a11y/k-tech-heading-jump-fix_LP |
+| **GitHub** | https://github.com/crossbeat461-a11y/k-tech-heading-jump-fix-lp |
 | **Vercel** | https://k-tech-heading-jump-fix-lp.vercel.app/ (after import) |
 
 ## Updating for a new plugin version
@@ -35,7 +35,7 @@ python3 -m http.server 8080
 
 ### Vercel (recommended)
 
-1. [Vercel](https://vercel.com/new) → Import Git → `crossbeat461-a11y/k-tech-heading-jump-fix_LP`
+1. [Vercel](https://vercel.com/new) → Import Git → `crossbeat461-a11y/k-tech-heading-jump-fix-lp`
 2. Framework Preset: **Other** (static)
 3. Deploy
 
