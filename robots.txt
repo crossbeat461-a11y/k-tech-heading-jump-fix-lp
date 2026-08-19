@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://k-tech-heading-jump-fix-lp.vercel.app/sitemap.xml
