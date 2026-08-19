@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heading Jump Fix v0.1.3 | Obsidian アウトラインの見出しジャンプを1クリックで確実に</title>
-    <meta name="description" content="Heading Jump Fix — Obsidian Community plugin v0.1.3. Auto-correct scroll position after outline or heading clicks so one click is enough. Fully offline. Free & MIT.">
+    <title>Heading Jump Fix v0.3.0 | Obsidian アウトラインの見出しジャンプを1クリックで確実に</title>
+    <meta name="description" content="Heading Jump Fix — Obsidian Community plugin v0.3.0. Auto-correct scroll position after outline or heading clicks so one click is enough. Fully offline. Free & MIT.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="K-Tech Studio">
     <link rel="canonical" href="https://k-tech-heading-jump-fix-lp.vercel.app/">
@@ -13,7 +13,7 @@
     <link rel="alternate" hreflang="x-default" href="https://k-tech-heading-jump-fix-lp.vercel.app/">
     <meta property="og:site_name" content="K-Tech Studio">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Heading Jump Fix v0.1.3 | Obsidian Outline Jump">
+    <meta property="og:title" content="Heading Jump Fix v0.3.0 | Obsidian Outline Jump">
     <meta property="og:description" content="Clicking a heading in the Outline moves the cursor but doesn't scroll? This plugin performs the second click for you. Fully offline.">
     <meta property="og:url" content="https://k-tech-heading-jump-fix-lp.vercel.app/">
     <meta property="og:image" content="https://github.com/crossbeat461-a11y/k-tech-heading-jump-fix/raw/main/images/screenshot.png">
@@ -21,7 +21,7 @@
     <meta property="og:locale" content="ja_JP">
     <meta property="og:locale:alternate" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Heading Jump Fix v0.1.3 | Obsidian Outline Jump">
+    <meta name="twitter:title" content="Heading Jump Fix v0.3.0 | Obsidian Outline Jump">
     <meta name="twitter:description" content="Auto-correct scroll position after outline heading clicks in Obsidian. Free & MIT.">
     <meta name="twitter:image" content="https://github.com/crossbeat461-a11y/k-tech-heading-jump-fix/raw/main/images/screenshot.png">
     <meta name="twitter:image:alt" content="Heading Jump Fix plugin in Obsidian">
@@ -53,7 +53,7 @@
           "description": "Obsidian plugin that auto-corrects scroll position after outline heading clicks.",
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Obsidian",
-          "softwareVersion": "0.1.3",
+          "softwareVersion": "0.3.0",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
           "author": { "@id": "https://k-tech-lab.vercel.app/#organization" }
         }
@@ -684,7 +684,7 @@
         <div class="container">
             <div class="plugin-badge-row">
                 <span class="badge badge-obsidian">🔌 Obsidian Community plugin</span>
-                <span class="badge badge-version" id="version-badge">v0.1.3</span>
+                <span class="badge badge-version" id="version-badge">v0.3.0</span>
                 <span class="badge badge-offline">
                     <span class="lang-ja">完全オフライン</span>
                     <span class="lang-en">Fully offline</span>
@@ -952,7 +952,19 @@
             <div class="changelog">
                 <!-- 新しいリリースはこのリストの先頭に追加する / Prepend new releases here -->
                 <div class="release">
-                    <span class="release-tag latest">v0.1.3</span>
+                    <span class="release-tag latest">v0.3.0</span>
+                    <div class="release-body">
+                        <span class="release-date">2026.08.19</span>
+                        <h3>
+                            <span class="lang-ja">テーマのスムーズスクロール対策とデバッグログ</span>
+                            <span class="lang-en">Theme scroll override and debug log</span>
+                        </h3>
+                        <p class="lang-ja">テーマの <code>scroll-behavior: smooth</code> で見出しを外す問題を設定で上書き。開発者コンソール向けのデバッグログ（既定オフ）。</p>
+                        <p class="lang-en">Optional override so theme <code>scroll-behavior: smooth</code> does not miss the heading. Opt-in debug log in the developer console.</p>
+                    </div>
+                </div>
+                <div class="release">
+                    <span class="release-tag">v0.1.3</span>
                     <div class="release-body">
                         <span class="release-date">2026.08.19</span>
                         <h3>
@@ -1005,7 +1017,7 @@
                 <a href="https://buymeacoffee.com/k_tech_studio" target="_blank" rel="noopener noreferrer">☕ Buy Me a Coffee</a>
                 <a href="https://k-tech-lab.vercel.app/" target="_blank" rel="noopener noreferrer">K-Tech Studio</a>
             </div>
-            <p>Heading Jump Fix v0.1.3 · MIT · <a href="https://github.com/crossbeat461-a11y">K-Tech Studio</a></p>
+            <p>Heading Jump Fix v0.3.0 · MIT · <a href="https://github.com/crossbeat461-a11y">K-Tech Studio</a></p>
         </div>
     </footer>
 

@@ -1,6 +1,6 @@
 # Heading Jump Fix — Landing Page
 
-Official landing page for **Heading Jump Fix** (Obsidian Community plugin **v0.1.3**).
+Official landing page for **Heading Jump Fix** (Obsidian Community plugin **v0.3.0**).
 
 - Auto-correct scroll position after outline or heading clicks so one click is enough
 - Duplicate headings matched by outline order; configurable retry delay / count
@@ -16,7 +16,7 @@ Official landing page for **Heading Jump Fix** (Obsidian Community plugin **v0.1
 
 ## Updating for a new plugin version
 
-1. Replace the version string (`v0.1.3`) in `index.html`:
+1. Replace the version string (`v0.3.0`) in `index.html`:
    - `<title>` and meta descriptions
    - hero `#version-badge`
    - footer line
