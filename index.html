@@ -643,28 +643,92 @@
 
         /* Footer */
         footer {
-            padding: 48px 0;
+            padding: 56px 0 80px;
             text-align: center;
-            background: var(--page-bg);
-            color: #94a3b8;
-            font-size: 0.88rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            background: #0c0814;
+            border-top: 1px solid rgba(167, 139, 250, 0.14);
         }
-
-        footer a {
-            color: var(--obs-purple-light);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        footer a:hover { text-decoration: underline; }
 
         .footer-links {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 16px 24px;
-            margin-bottom: 16px;
+            gap: 14px 22px;
+            margin-bottom: 18px;
+        }
+
+        .footer-links a {
+            color: var(--obs-purple-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.88rem;
+        }
+
+        .footer-links a:hover { color: #c4b5fd; }
+
+        .footer-copy {
+            color: #6b6280;
+            font-size: 0.85rem;
+            margin: 0 0 16px;
+        }
+
+        .footer-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .btn-inline-text {
+            background: none;
+            border: none;
+            color: #6b6280;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        #policy-box {
+            display: none;
+            text-align: left;
+            background: var(--card);
+            color: var(--text);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 30px auto 0;
+            max-width: 800px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+        }
+
+        #policy-box h3 {
+            color: var(--obs-purple-dark);
+            border-bottom: 2px solid var(--obs-purple-light);
+            padding-bottom: 10px;
+            margin: 0 0 25px;
+        }
+
+        .policy-content h4 {
+            color: var(--obs-purple-dark);
+            margin: 20px 0 10px;
+            border-left: 4px solid var(--obs-purple-light);
+            padding-left: 10px;
+        }
+
+        .policy-content p {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            color: var(--text-muted);
+        }
+
+        .policy-close {
+            background: var(--obs-purple);
+            color: #fff;
+            border: none;
+            padding: 12px 35px;
+            cursor: pointer;
+            border-radius: 25px;
+            font-weight: 600;
         }
 
         @media (max-width: 640px) {
@@ -1015,7 +1079,29 @@
                 <a href="https://buymeacoffee.com/k_tech_studio" target="_blank" rel="noopener noreferrer">☕ Buy Me a Coffee</a>
                 <a href="https://k-tech-lab.vercel.app/" target="_blank" rel="noopener noreferrer">K-Tech Studio</a>
             </div>
-            <p>Heading Jump Fix v1.0.0 · MIT · <a href="https://github.com/crossbeat461-a11y">K-Tech Studio</a></p>
+            <p class="footer-copy">Heading Jump Fix v1.0.0 · MIT · &copy; 2026 k-Tech Studio. Stay curious.</p>
+            <div class="footer-meta">
+                <button type="button" onclick="togglePolicy()" class="btn-inline-text">About this site</button>
+            </div>
+
+            <div id="policy-box">
+                <h3>About this site</h3>
+                <p style="font-size: 0.85rem;">利用者の責任において使用してください。損害について一切の責任を負いません。</p>
+                <div class="policy-content">
+                    <h4>プライバシーポリシー</h4>
+                    <p>当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。Cookie で収集されるデータは匿名であり、個人を特定するものではありません。プラグイン本体は Vault 内のスクロール補正のみを行い、外部へデータを送信しません。</p>
+
+                    <h4>免責事項</h4>
+                    <p>当サイトからリンクによって移動された先のサイトで提供される情報・サービスについて、一切の責任を負いません。</p>
+                    <p>掲載内容は正確な情報の提供に努めていますが、正確性や安全性を保証するものではありません。掲載内容によって生じた損害等の責任を負いかねますのでご了承ください。</p>
+
+                    <h4>お問い合わせ</h4>
+                    <p>不具合報告・機能要望は <a href="https://github.com/crossbeat461-a11y/k-tech-heading-jump-fix/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a>、または <a href="https://note.com/ktech_dev" target="_blank" rel="noopener noreferrer">note</a>・<a href="https://x.com/K_Tech_Dev" target="_blank" rel="noopener noreferrer">X</a> よりご連絡ください。</p>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <button type="button" onclick="togglePolicy()" class="policy-close">閉じる</button>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -1029,6 +1115,13 @@
                 });
             });
         });
+
+        function togglePolicy() {
+            const box = document.getElementById('policy-box');
+            const show = box.style.display !== 'block';
+            box.style.display = show ? 'block' : 'none';
+            if (show) box.scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
