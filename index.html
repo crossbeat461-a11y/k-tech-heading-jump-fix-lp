@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heading Jump Fix v1.0.0 | Obsidian アウトラインの見出しジャンプを1クリックで確実に</title>
-    <meta name="description" content="Heading Jump Fix — Obsidian Community plugin v1.0.0. Auto-correct scroll position after outline or heading clicks so one click is enough. Fully offline. Free & MIT.">
+    <title>Heading Jump Fix v1.1.0 | Obsidian アウトラインの見出しジャンプを1クリックで確実に</title>
+    <meta name="description" content="Heading Jump Fix — Obsidian Community plugin v1.1.0. Auto-correct scroll after outline, wikilink, heading, and block-reference clicks. Fully offline. Free & MIT.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="K-Tech Studio">
     <link rel="canonical" href="https://k-tech-heading-jump-fix-lp.vercel.app/">
@@ -13,7 +13,7 @@
     <link rel="alternate" hreflang="x-default" href="https://k-tech-heading-jump-fix-lp.vercel.app/">
     <meta property="og:site_name" content="K-Tech Studio">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Heading Jump Fix v1.0.0 | Obsidian Outline Jump">
+    <meta property="og:title" content="Heading Jump Fix v1.1.0 | Obsidian Outline Jump">
     <meta property="og:description" content="Clicking a heading in the Outline moves the cursor but doesn't scroll? This plugin performs the second click for you. Fully offline.">
     <meta property="og:url" content="https://k-tech-heading-jump-fix-lp.vercel.app/">
     <meta property="og:image" content="https://github.com/crossbeat461-a11y/k-tech-heading-jump-fix/raw/main/images/screenshot.png">
@@ -21,7 +21,7 @@
     <meta property="og:locale" content="ja_JP">
     <meta property="og:locale:alternate" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Heading Jump Fix v1.0.0 | Obsidian Outline Jump">
+    <meta name="twitter:title" content="Heading Jump Fix v1.1.0 | Obsidian Outline Jump">
     <meta name="twitter:description" content="Auto-correct scroll position after outline heading clicks in Obsidian. Free & MIT.">
     <meta name="twitter:image" content="https://github.com/crossbeat461-a11y/k-tech-heading-jump-fix/raw/main/images/screenshot.png">
     <meta name="twitter:image:alt" content="Heading Jump Fix plugin in Obsidian">
@@ -53,7 +53,7 @@
           "description": "Obsidian plugin that auto-corrects scroll position after outline heading clicks.",
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "Obsidian",
-          "softwareVersion": "1.0.0",
+          "softwareVersion": "1.1.0",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
           "author": { "@id": "https://k-tech-lab.vercel.app/#organization" }
         }
@@ -787,7 +787,7 @@
         <div class="container">
             <div class="plugin-badge-row">
                 <span class="badge badge-obsidian">🔌 Obsidian Community plugin</span>
-                <span class="badge badge-version" id="version-badge">v1.0.0</span>
+                <span class="badge badge-version" id="version-badge">v1.1.0</span>
                 <span class="badge badge-offline">
                     <span class="lang-ja">完全オフライン</span>
                     <span class="lang-en">Fully offline</span>
@@ -800,8 +800,8 @@
                 <span class="lang-en">Outline heading jumps,<br>reliable in <span class="purple">one click</span></span>
             </h1>
 
-            <p class="lead lang-ja">Heading Jump Fix は Obsidian 用プラグイン。アウトラインや <code>[[wikilink#見出し]]</code> をクリックしてもスクロールが追従しないとき、2回目のクリック相当を自動で行います。ネットワーク不要・無料（MIT）。</p>
-            <p class="lead lang-en">Heading Jump Fix is an Obsidian plugin. When Outline or <code>[[wikilink#heading]]</code> clicks move the cursor but don't scroll, it performs the second correction for you. No network requests. Free &amp; MIT.</p>
+            <p class="lead lang-ja">Heading Jump Fix は Obsidian 用プラグイン。アウトライン、<code>[[wikilink#見出し]]</code>、<code>[[ノート#^ブロック]]</code> をクリックしてもスクロールが追従しないとき、2回目のクリック相当を自動で行います。ネットワーク不要・無料（MIT）。</p>
+            <p class="lead lang-en">Heading Jump Fix is an Obsidian plugin. When Outline, <code>[[wikilink#heading]]</code>, or <code>[[note#^block]]</code> clicks move the cursor but don't scroll, it performs the second correction for you. No network requests. Free &amp; MIT.</p>
 
             <div class="hero-cta">
                 <a href="https://obsidian.md/plugins?id=k-tech-heading-jump-fix" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
@@ -929,11 +929,13 @@
                     </h3>
                     <ul class="lang-ja">
                         <li>アウトライン 1 クリックでの見出しジャンプ</li>
+                        <li>本文の <code>[[wikilink#見出し]]</code> と <code>[[ノート#^ブロック]]</code></li>
                         <li>同名見出し（アウトライン上の順序で区別）</li>
                         <li>リトライ遅延・回数の調整</li>
                     </ul>
                     <ul class="lang-en">
                         <li>One-click heading jumps from the Outline sidebar</li>
+                        <li>In-note <code>[[wikilink#heading]]</code> and <code>[[note#^block]]</code></li>
                         <li>Duplicate headings (matched by outline order)</li>
                         <li>Adjustable retry delay and count</li>
                     </ul>
@@ -946,12 +948,12 @@
                     <ul class="lang-ja">
                         <li>全体的な UI の重さ（Electron / GPU / プラグイン過多）</li>
                         <li>Dropbox などの同期 I/O 遅延</li>
-                        <li>本文内 <code>[[wikilink#見出し]]</code> クリック（今後のアップデートで対応予定）</li>
+                        <li>リンクではないリーディングビューの見出しクリック</li>
                     </ul>
                     <ul class="lang-en">
                         <li>General UI sluggishness (Electron / GPU / too many plugins)</li>
                         <li>Dropbox or sync I/O delay</li>
-                        <li>In-note <code>[[wikilink#heading]]</code> clicks (planned for a future update)</li>
+                        <li>Reading-view heading clicks that are not links</li>
                     </ul>
                 </div>
             </div>
@@ -1055,7 +1057,19 @@
             <div class="changelog">
                 <!-- 新しいリリースはこのリストの先頭に追加する / Prepend new releases here -->
                 <div class="release">
-                    <span class="release-tag latest">v1.0.0</span>
+                    <span class="release-tag latest">v1.1.0</span>
+                    <div class="release-body">
+                        <span class="release-date">2026.08.26</span>
+                        <h3>
+                            <span class="lang-ja">ブロック参照のジャンプ補正</span>
+                            <span class="lang-en">Block-reference jump correction</span>
+                        </h3>
+                        <p class="lang-ja">本文とリンクペインの <code>[[ノート#^ブロック]]</code> クリックでも、見出しと同じくスクロールを補正します。</p>
+                        <p class="lang-en">Corrects scroll after <code>[[note#^block]]</code> clicks in the note and in link panes, using the same path as heading jumps.</p>
+                    </div>
+                </div>
+                <div class="release">
+                    <span class="release-tag">v1.0.0</span>
                     <div class="release-body">
                         <span class="release-date">2026.08.19</span>
                         <h3>
@@ -1118,7 +1132,7 @@
                 <a href="https://buymeacoffee.com/k_tech_studio" target="_blank" rel="noopener noreferrer">☕ Buy Me a Coffee</a>
                 <a href="https://k-tech-lab.vercel.app/" target="_blank" rel="noopener noreferrer">K-Tech Studio</a>
             </div>
-            <p class="footer-copy">Heading Jump Fix v1.0.0 · MIT · &copy; 2026 K-Tech Studio. Stay curious.</p>
+            <p class="footer-copy">Heading Jump Fix v1.1.0 · MIT · &copy; 2026 K-Tech Studio. Stay curious.</p>
             <div class="footer-meta">
                 <button type="button" onclick="togglePolicy()" class="btn-inline-text">About this site</button>
             </div>
