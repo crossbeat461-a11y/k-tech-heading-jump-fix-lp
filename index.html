@@ -914,8 +914,8 @@
                     <span class="icon">🔒</span>
                     <h3 class="lang-ja">完全オフライン</h3>
                     <h3 class="lang-en">Fully offline</h3>
-                    <p class="lang-ja">ネットワーク通信は一切なし。Vault のメタデータだけで動作します。</p>
-                    <p class="lang-en">No network requests. Works entirely from your vault's metadata.</p>
+                    <p class="lang-ja">ネットワーク通信は一切なし。Vault 内の索引が無いファイルでも、本文の見出しから着地します。</p>
+                    <p class="lang-en">No network requests. Outline jumps still land when the open file has no vault metadata cache.</p>
                 </article>
                 <article class="feature-card">
                     <span class="icon">🆓</span>
@@ -943,6 +943,7 @@
                     </h3>
                     <ul class="lang-ja">
                         <li>アウトライン 1 クリックでの見出しジャンプ</li>
+                        <li>Vault 外の Markdown でもアウトライン着地</li>
                         <li>検索ペインのヒットクリック</li>
                         <li>本文の <code>[[wikilink#見出し]]</code> と <code>[[ノート#^ブロック]]</code></li>
                         <li>同名見出し（アウトライン上の順序で区別）</li>
@@ -950,6 +951,7 @@
                     </ul>
                     <ul class="lang-en">
                         <li>One-click heading jumps from the Outline sidebar</li>
+                        <li>Outline landing for Markdown opened outside the vault</li>
                         <li>Search pane match clicks</li>
                         <li>In-note <code>[[wikilink#heading]]</code> and <code>[[note#^block]]</code></li>
                         <li>Duplicate headings (matched by outline order)</li>
